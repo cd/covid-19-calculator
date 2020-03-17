@@ -15,6 +15,10 @@
     <h1>COVID-19 Calculator</h1>
   </header>
   <main>
+    <section id="result">
+      <p><span id="infected-now"></span> infected today!</p>
+      <div id="chart"><canvas></canvas></div>
+    </section>
     <section id="settings">
       <form>
         <div class="row">
@@ -36,10 +40,6 @@
         <div id="hint">Default values are based on<br><a href="https://github.com/midas-network/COVID-19/tree/master/parameter_estimates/2019_novel_coronavirus">https://github.com/midas-network/COVID-19/tree/master/parameter_estimates/2019_novel_coronavirus</a></div>
         <button>Calculate!</button>
       </form>
-    </section>
-    <section id="result">
-      <p><span id="infected-now"></span> infected today!</p>
-      <div id="chart"><canvas></canvas></div>
     </section>
   </main>
   <footer>
