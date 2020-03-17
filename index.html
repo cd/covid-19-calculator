@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>COVID-19 Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Calculates current number of infections based on official deaths and other statistics.">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script defer src="Chart.min.js"></script>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header>
+    <h1>COVID-19 Calculator</h1>
+  </header>
+  <main>
+    <section id="settings">
+      <form>
+        <div class="row">
+          <label for="deaths">How many deaths are known in your region?</label>
+          <input type="number" id="deaths" value="10" required>
+        </div>
+        <div class="row">
+          <label for="death-rate">Mortality Rate [%]</label>
+          <input type="number" id="death-rate" value="1.0" step="0.1" min="0.1" max="99.9" required>
+        </div>
+        <div class="row">
+          <label for="day-to-death">Days from infection to death</label>
+          <input type="number" id="day-to-death" value="24" required>
+        </div>
+        <div class="row">
+          <label for="doubling-time">Number of days in which the number of infections doubles</label>
+          <input type="number" id="doubling-time" value="4.0" step="0.1" min="1" required>
+        </div>
+        <div id="hint">Default values are based on<br><a href="https://github.com/midas-network/COVID-19/tree/master/parameter_estimates/2019_novel_coronavirus">https://github.com/midas-network/COVID-19/tree/master/parameter_estimates/2019_novel_coronavirus</a></div>
+        <button>Calculate!</button>
+      </form>
+    </section>
+    <section id="result">
+      <p><span id="infected-now"></span> infected today!</p>
+      <div id="chart"><canvas></canvas></div>
+    </section>
+  </main>
+  <footer>
+    <a href="https://medium.com/@tomaspueyo/coronavirus-act-today-or-people-will-die-f4d3d9cd99ca">Thanks @tomaspueyo for this very readable article and inspiration</a>
+    <h2>Imprint</h2>
+    <span>Christian Diederich</span>
+    <span>Heinrich-Mann-Str. 1</span>
+    <span>44141 Dortmund, Germany</span>
+    <span>E-Mail: chrdiede&#64;gmail.com</span>
+    <span>Tel: +49 (0) 1575 2935876</span>
+  </footer>
+</body>
+</html>
