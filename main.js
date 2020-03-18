@@ -7,7 +7,6 @@
     document.querySelectorAll('#settings .row').forEach(row => {
       row.style.display = 'flex';
     });
-    document.querySelector('#deaths').select();
 
     const chartData = [];
     const chartLabels = [];
