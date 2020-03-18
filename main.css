@@ -91,6 +91,10 @@ footer span:last-child::after {
   margin: 1em 0;
 }
 
+#footnote {
+  display: none;
+}
+
 #result {
   text-align: center;
   font-size: 2rem;

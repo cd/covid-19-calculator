@@ -3,6 +3,7 @@
     document.querySelector('#infected-now').innerText = calcInfected(0);
     document.querySelector('#result').style.display = 'block';
     document.querySelector('#hint').style.display = 'block';
+    document.querySelector('#footnote').style.display = 'block';
     document.querySelectorAll('#settings .row').forEach(row => {
       row.style.display = 'flex';
     });
